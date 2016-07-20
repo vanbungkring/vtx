@@ -6,13 +6,13 @@ var request = require('request');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     var transaction_details = {};
-    transaction_details.order_id = '87126312678781233' + makeid();
+    transaction_details.order_id = 'order-' + makeid();
     transaction_details.gross_amount = '1000'
     var options = {
-        url: 'https://app.stg.veritrans.co.id/snap/v1/pay/',
+        url: 'https://app.sandbox.veritrans.co.id/snap/v1/pay/',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Basic VlQtc2VydmVyLXh3NE1JWlo1U0JMTDFHRTI4aFprXzNQQjo='
+            'Authorization': 'Basic VlQtc2VydmVyLUNoWTBwZmJ2VUNGaXV5WjhNZjB0S0o0ag=='
         },
         body: JSON.stringify({
             'transaction_details': transaction_details
