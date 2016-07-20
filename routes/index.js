@@ -4,7 +4,7 @@ var request = require('request');
 
 
 /* GET home page. */
-router.post('/', function(req, res, next) {
+router.post('/charge', function(req, res, next) {
     var transaction_details = {};
     transaction_details.order_id = 'order-' + makeid();
     transaction_details.gross_amount = '1000'
